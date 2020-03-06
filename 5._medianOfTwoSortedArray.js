@@ -30,6 +30,8 @@ function medianOfTwoSortedArray(arr1, arr2, pos) {
   var evenOffset = pos % 2 == 0 ? 1 : 0,
     offsetMinus = Math.floor(pos / 2) - evenOffset,
     offsetPlus = pos - Math.floor(pos / 2) + evenOffset;
+  console.log("offsetMinus : ", offsetMinus);
+  console.log("offsetPlus : ", offsetPlus);
 
   if (median1 < median2) {
     return medianOfTwoSortedArray(
@@ -46,6 +48,6 @@ function medianOfTwoSortedArray(arr1, arr2, pos) {
   }
 }
 
-medianOfTwoSortedArray([1, 2, 3], [4, 5, 6], 3); // 3.5
-medianOfTwoSortedArray([11, 23, 24], [32, 33, 450], 3); // 28
-medianOfTwoSortedArray([1, 2, 3], [2, 3, 5], 3); // 2.5
+console.log(medianOfTwoSortedArray([1, 2, 3], [4, 5, 6], 3)); // 3.5
+console.log(medianOfTwoSortedArray([11, 23, 24], [32, 33, 450], 3)); // 28
+console.log(medianOfTwoSortedArray([1, 2, 3], [2, 3, 5], 3)); // 2.5
