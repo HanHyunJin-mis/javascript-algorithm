@@ -1,3 +1,4 @@
+// 두 배열을 합친 하나의 중앙값 찾기
 function medianOfArray(array) {
   var length = array.length;
   // Odd
