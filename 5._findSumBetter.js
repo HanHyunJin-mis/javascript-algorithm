@@ -16,6 +16,7 @@ function findSumBetter(arr, weight) {
       // store index
       console.log("인덱스 저장");
       hashtable[difference] = i;
+      // hashtable에는 해당되는 index의 값과 index가 저장된다.
     }
   }
   return -1;
