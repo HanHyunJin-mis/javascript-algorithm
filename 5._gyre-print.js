@@ -1,9 +1,10 @@
-// 나선형으로 출력
+// 연습문제 : 나선형으로 출력
 
 // 증가하는 2중 배열 만들기
 
+let newArray = [];
 function jaggedArray(row, column) {
-  let newArray = new Array(row);
+  newArray = new Array(row);
 
   for (let i = 0; i < row; i++) {
     newArray[i] = new Array(column);
@@ -19,6 +20,20 @@ function jaggedArray(row, column) {
     newArray[rowCount][columnCount] = j;
     columnCount++;
   }
+  return newArray;
 }
 
-jaggedArray(3, 4);
+console.log(jaggedArray(4, 5));
+
+// 나선형으로 출력하기
+let row = 4;
+let column = 5;
+
+function gyrePrint(row, column) {
+  let tempRow = row; // 4
+  let tempColumn = column; // 5
+  for (let i = 0; i < row * column; i++) {}
+  console.log(newArray[tempRow][tempColumn]);
+}
+
+gyrePrint(row, column);
