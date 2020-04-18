@@ -1,9 +1,14 @@
 console.log("안녕 좋은아침ㅎㅎ");
 
 let $squareFrame = document.querySelector(".squares-frame");
-
+let maxZ = 1000;
 window.onload = function () {
   console.log("온로드!", $squareFrame);
+  let add = document.getElementById("add");
+  add.onclick = this.addSquare;
+  let colors = document.getElementById("colors");
+  colors.onclick = this.changeColors;
+
   let squareCount = parseInt(Math.random() * 50 + 1);
 
   console.log("0~50 랜덤 수", squareCount);
@@ -15,12 +20,12 @@ window.onload = function () {
 function addSquare() {
   let square = document.createElement("div");
   square.className = "square";
-  square.style.left = parseInt(Math.random() * 1500) + "px";
-  square.style.top = parseInt(Math.random() * 700) + "px";
+  square.style.left = parseInt(Math.random() * 1450) + "px";
+  square.style.top = parseInt(Math.random() * 650) + "px";
 
   square.style.backgroundColor = getRandomColor();
+  square.onclick = squareClick;
   let squareArea = document.getElementById("squares-frame");
-  console.log(squareArea, square);
 
   squareArea.appendChild(square);
 }
@@ -31,7 +36,6 @@ function getRandomColor() {
   for (let i = 0; i < 6; i++) {
     result += letters.charAt(parseInt(Math.random() * letters.length));
   }
-  console.log(result);
 
   return result;
 }
@@ -43,4 +47,12 @@ function changeColors() {
   }
 }
 
-function squareClick() {}
+function squareClick() {
+  let oldZ = parseInt(this.style.zIndex);
+  if (oldZ == maxZ) {
+    this.parentNode.removeChild(this);
+  } else {
+    maxZ++;
+    this.style.zIndex = maxZ;
+  }
+}
