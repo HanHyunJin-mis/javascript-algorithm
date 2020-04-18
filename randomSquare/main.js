@@ -38,5 +38,9 @@ function getRandomColor() {
 
 function changeColors() {
   let squares = document.querySelectorAll("#squares-frame div");
-  for (let i = 0; i < squares.length; i++) {}
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].style.backgroundColor = getRandomColor();
+  }
 }
+
+function squareClick() {}
