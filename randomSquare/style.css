@@ -7,3 +7,10 @@ header {
   margin-top: 45px;
   font-weight: 800;
 }
+.squares-frame {
+  background-color: salmon;
+  width: 1500px;
+  height: 700px;
+  margin: 0 auto;
+  border: 3px solid darkblue;
+}
