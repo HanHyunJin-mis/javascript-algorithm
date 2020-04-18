@@ -39,8 +39,8 @@ console.log(jaggedArray(4, 5));
 function gyrePrint(array) {
   let topRow = 0;
   let leftCol = 0;
-  let btmRow = array.length - 1;
-  let rightCol = array[0].length - 1;
+  let btmRow = array.length - 1; //3
+  let rightCol = array[0].length - 1; // 4
 }
 
 gyrePrint(newArray);
