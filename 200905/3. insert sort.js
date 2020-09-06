@@ -1,8 +1,8 @@
 function insertSort() {
-  let arr = [1, 10, 5, 8, 7, 6, 4, 3, 2, 9];
+  let arr = [10, 1, 5, 8, 7, 6, 4, 3, 2, 9];
   for (let i = 1; i < 10; i++) {
     let j = i;
-    while (arr[j - 1] > arr[j]) {
+    while (arr[j - 1] > arr[j] && j >= 0) {
       let temp = arr[j];
       arr[j] = arr[j - 1];
       arr[j - 1] = temp;

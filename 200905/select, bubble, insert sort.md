@@ -132,7 +132,7 @@ function insertSort() {
   // 다른 풀이 (훨씬 더 좋은 듯)
   for (let i = 1; i < 10; i++) {
     let j = i;
-    while (arr[j - 1] > arr[j]) {
+    while (arr[j - 1] > arr[j] && j >= 0) {
       let temp = arr[j];
       arr[j] = arr[j - 1];
       arr[j - 1] = temp;
