@@ -4,6 +4,9 @@ function quickSort(arr, start, end) {
   // 왼쪽 -> 오른쪽으로 옮길 변수 left와 오른쪽 -> 왼쪽으로 옮길 변수 right
   let left = start;
   let right = end;
+
   // 재귀
+  quickSort(arr, start, right);
+  quickSort(arr, left, end);
 }
 console.log(quickSort(arr, 0, arr.length - 1));
