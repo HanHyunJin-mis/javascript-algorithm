@@ -8,11 +8,13 @@ function selectSort() {
       if (min > arr[j]) {
         min = arr[j];
         index = j;
+        console.log(min, index);
       }
     }
     let temp = arr[index];
     arr[index] = arr[i];
     arr[i] = temp;
+    console.log(arr);
   }
   return arr;
 }
